@@ -41,6 +41,4 @@ Se incluye también un HTML en el que se utilizan algunos de estos métodos.
 - Cambiar el psicólogo de un usuario
 - Ver usuarios con psicólogo
 - Ver psicólogos con centro asociado
-
-NOTA: aunque la inserción de usuarios se ha implementado en el proyecto de Spring Boot, no se ha desarrollado la página
-de registro de usuarios en HTML. Se hará en la práctica final de la asignatura. 
+- Insertar usuarios (especificando nombre completo y contraseña; sin psicólogo asociado por defecto)

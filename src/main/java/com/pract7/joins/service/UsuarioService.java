@@ -24,5 +24,7 @@ public interface UsuarioService {
 
     //Actualizar Usuario
     UsuarioTable updateUsuario(Long id, UsuarioTable usuario);
-    //UsuarioTable updateUsuario(Long id, Long idPsic);
+
+    //Insertar usuario
+    UsuarioTable insertUsuario(UsuarioTable usuarioTable);
 }

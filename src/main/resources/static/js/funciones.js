@@ -6,17 +6,23 @@ let psicNuevo;
 let withPsic;
 let divShowCentros;
 let withCentro;
+let newName;
+let newPwd;
 
-// POST REQUEST - work in progress
-/*async function insertarUsuario(){
-    //Evito que recargue la página
-    //event.preventDefault();
+// POST REQUEST
+async function insertarUsuario(){
+
+    event.preventDefault();
+    newName = document.getElementById("name").value;
+    newName = newName.toString();
+    newPwd = document.getElementById("pwd").value;
+    newPwd = newPwd.toString();
 
     const dataObj = {
-            "id" : 10007,
-            "userName" : "Gabriela",
-            "userPwd" : "password7",
-            "idPsic" : 20001
+
+            "userName" : newName,
+            "userPwd" : newPwd,
+            "idPsic" : 0
     };
 
     let res = await fetch("/api/v1/usuarios",{
@@ -28,7 +34,7 @@ let withCentro;
     });
 
     console.log(res);
-}*/
+}
 
 // GET REQUEST - USER BY ID
 async function getUserById(userId){

@@ -121,5 +121,28 @@
         <br>
         <div align="center" id="withCentro"></div>
     </div>
+    <br>
+    <div align="center" style="border-style: solid">
+        <div align="center" style="border">
+            <h5>Insertar un nuevo usuario</h5>
+            <br>
+            <form name="insertForm">
+                <div class="form-group">
+                    <label class="form-field" for="name">Nombre completo: </label>
+                    <input class="form-field" id="name" name="name" type="text">
+                </div>
+                <div class="form-group">
+                    <label class="form-field" for="pwd">Contraseña: </label>
+                    <input type="password" id="pwd" name="pwd" minlength="8">
+                </div>
+                <div>
+                    <button type="submit" class="button" onclick="insertarUsuario()">Pulsa para insertar</button>
+                </div>
+            </form>
+        </div>
+
+        <br>
+
+    </div>
 </body>
 </html>

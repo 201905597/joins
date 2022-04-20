@@ -109,8 +109,14 @@ public class UsuarioServiceImpl implements UsuarioService {
         }
     }
 
-    /*@Override
-    public UsuarioTable updateUsuario(Long id, Long idPsic){
-        return null;
-    }*/
+    @Override
+    public UsuarioTable insertUsuario(UsuarioTable usuarioTable){
+        UsuarioTable userTable= new UsuarioTable();
+        // Como es un POST, no pasamos el ID (es un Long @Id, se autoincrementa solo)
+        userTable.setUserName(usuarioTable.getUserName());
+        userTable.setUserPwd(usuarioTable.getUserPwd());
+        userTable.setIdPsic(usuarioTable.getIdPsic());
+        UsuarioTable newUser = usuarioRepository.save(userTable);
+        return newUser;
+    }
 }

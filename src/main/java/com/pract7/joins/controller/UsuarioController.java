@@ -85,16 +85,16 @@ public class UsuarioController {
         return ResponseEntity.ok().body(newUser);
     }
 
-    /*@PostMapping("/usuarios")
+    @PostMapping("/usuarios")
     public ResponseEntity<UsuarioTable> insertarUsuario(@RequestBody UsuarioTable usuario){
         try{
-            UsuarioTable newUser = usuarioRepository.save(new UsuarioTable(usuario.getId(),usuario.getUserName(),usuario.getUserPwd(),usuario.getIdPsic()));
+            UsuarioTable newUser = usuarioService.insertUsuario(usuario);
             return new ResponseEntity<>(newUser, HttpStatus.CREATED);
         }catch(Exception e){
             System.out.println(e);
             return new ResponseEntity<>(null,HttpStatus.INTERNAL_SERVER_ERROR);
         }
-    }*/
+    }
 
     /*@PutMapping("/usuarios/{id}")
     public ResponseEntity<UsuarioDTO> updateUsuario(@PathVariable Long id, @RequestParam Long idPsic){
