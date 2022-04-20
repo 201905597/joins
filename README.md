@@ -35,7 +35,8 @@ A continuación se detallan algunas de las queries incluidas:
 Se incluye también un HTML en el que se utilizan algunos de estos métodos.
 
 ![img_1.png](img_1.png)
-
+...
+![img_2.png](img_2.png)
 - Ver usuarios, psicólogos y centros
 - Dar de baja a un psicólogo
 - Cambiar el psicólogo de un usuario
