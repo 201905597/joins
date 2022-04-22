@@ -214,7 +214,6 @@ async function showPsicologos(){
 }
 
 // GET REQUEST - CENTROS
-// GET REQUEST - PSICOLOGOS
 async function showCentros(){
 
         let res = await fetch("/api/v1/centros",{
@@ -224,13 +223,13 @@ async function showCentros(){
                 'Accept': 'application/json',
         }});
 
-        //console.log(res); //ok
+        console.log(res); //ok
 
         if (res.status == 200){
             const data = await res.json();
             //console.log(data); //ok
             //let user1 = data[0]; //ok
-            divShowCentros = document.getElementById("mostrarPsic");
+            divShowCentros = document.getElementById("mostrarCentros");
             let content = "";
             for (let i = 0; i<data.length; i++){
                 let user = data[i];
