@@ -43,3 +43,4 @@ Se incluye también un HTML en el que se utilizan algunos de estos métodos.
 - Ver usuarios con psicólogo
 - Ver psicólogos con centro asociado
 - Insertar usuarios (especificando nombre completo y contraseña; sin psicólogo asociado por defecto)
+- Registro de usuarios (misma funcionalidad que insertar usuarios)
