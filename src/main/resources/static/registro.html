@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Register</title>
     <script src="js/funciones.js"></script>
     <link rel="stylesheet" href="css/mystyle.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,11 +27,23 @@
         </div>
     </nav>
     <br>
-    <h1 align="center">NeuraHealth</h1>
-    <h3 align="center">(Práctica 7 de PAT)</h3>
+    <h1 align="center">Registro</h1>
     <br>
-    <p align="center">Desarrollo de una App de Spring Boot que incluye una funcionalidad</p>
-    <p align="center">que permite persistir información utilizando la librería Spring Data</p>
-    <p align="center">JDBC con una base de datos H2</p>
+    <div align="center" style="border-style: solid">
+        <div align="center" style="border">
+            <h5>Regístrate</h5>
+            <br>
+            <form name="insertForm">
+                    <label for="name">Nombre completo: </label>
+                    <input id="name" name="name" type="text">
+                    <label for="pwd">Contraseña: </label>
+                    <input type="password" id="pwd" name="pwd">
+                    <button type="submit" class="button" onclick="insertarUsuario()">Pulsa para insertar</button>
+            </form>
+        </div>
+
+        <br>
+
+    </div>
 </body>
 </html>

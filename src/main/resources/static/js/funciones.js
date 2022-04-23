@@ -17,23 +17,39 @@ async function insertarUsuario(){
     newName = newName.toString();
     newPwd = document.getElementById("pwd").value;
     newPwd = newPwd.toString();
+    console.log(newName + newPwd) + newName;
+    //console.log(newName);
 
-    const dataObj = {
-
+    if (newName == "" || newPwd == ""){
+        alert("Por favor, completa todos los campos");
+    }else if (newPwd.length < 8){
+        alert("La contraseña debe ser de 8 caracteres");
+    }else{
+        const dataObj = {
             "userName" : newName,
-            "userPwd" : newPwd,
-            "idPsic" : 0
-    };
+             "userPwd" : newPwd,
+             "idPsic" : 0
+        };
 
-    let res = await fetch("/api/v1/usuarios",{
+        let res = await fetch("/api/v1/usuarios",{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(dataObj)
-    });
+        });
 
-    console.log(res);
+        console.log(res);
+        console.log(res.status);
+
+        if (res.status == 201){
+            alert("Todo ha ido bien :)");
+        }else{
+            alert("¡Vaya! Parece que algo ha ido mal :(");
+        }
+    }
+
+
 }
 
 // GET REQUEST - USER BY ID
